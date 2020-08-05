@@ -9,47 +9,68 @@
 </head>
 <body>
     <nav>
+        <button>
+            <i class="fas fa-moon"></i>
+        </button>
         <a href="#home">
             <i class="fa fa-home"></i>
-            <span>Home</span>
         </a>
         <a href="#projects">
             <i class="fa fa-laptop-code"></i>
-            <span>Projects</span>
         </a>
         <a href="#about">
             <i class="fa fa-user"></i>
-            <span>About</span>
         </a>
         <a href="#contact">
             <i class="fa fa-paper-plane"></i>
-            <span>Contact</span>
         </a>
     </nav>
     <div id="screens">
         <div id="home">
             <h1>Hi, I'm Salman</h1>
+            <p>And this is my site</p>
         </div>
         <div id="projects">
-            This is Product page
+            <div class="lang">
+                Language: Python, PHP
+            </div>
+            <div class="framework">
+                Frameworks: Django, Flask
+            </div>
         </div>
         <div id="about">
-            This is About page
+            21 yrs old dev from India
         </div>
         <div id="contact">
             <a href="http://www.instagram.com/salman_not_khan">
                 <i class="fa fa-instagram"></i>
+                <div>Instagram</div>
             </a>
             <a href="http://www.twitter.com/salman_not_khan">
                 <i class="fa fa-twitter"></i>
+                <div>Twitter</div>
             </a>
             <a href="mailto:tony903212@gmail.com">
                 <i class="fa fa-envelope"></i>
+                <div>Mail</div>
             </a>
             <a href="http://t.me/salmannotkhan">
                 <i class="fa fa-telegram"></i>
+                <div>Telegram</div>
             </a>
         </div>
     </div>
 </body>
+<script>
+    btn = document.querySelector('nav button')
+    if (Date().split(' ')[4].split(':')[0] > 18) {
+        document.querySelector('body').classList.toggle('dark')
+        btn.innerHTML = this.innerHTML == 'Light' ? 'Dark' : 'Light'
+    }
+    btn.addEventListener('click', function(){
+        document.querySelector('body').classList.toggle('dark')
+        this.children[0].classList.toggle('fa-sun')
+        this.children[0].classList.toggle('fa-moon')
+    })
+</script>
 </html>
