@@ -63,14 +63,15 @@
 </body>
 <script>
     btn = document.querySelector('nav button')
-    if (Date().split(' ')[4].split(':')[0] > 18) {
+    hours = new Date().getHours()
+    function nightMode(){
         document.querySelector('body').classList.toggle('dark')
-        btn.innerHTML = this.innerHTML == 'Light' ? 'Dark' : 'Light'
+        btn.children[0].classList.toggle('fa-sun')
+        btn.children[0].classList.toggle('fa-moon')
     }
-    btn.addEventListener('click', function(){
-        document.querySelector('body').classList.toggle('dark')
-        this.children[0].classList.toggle('fa-sun')
-        this.children[0].classList.toggle('fa-moon')
-    })
+    if (hours > 18){
+        nightMode()
+    }
+    btn.addEventListener('click', nightMode)
 </script>
 </html>
