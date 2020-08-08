@@ -10,6 +10,7 @@
 
 html, body {
     height: 100%;
+    overflow: hidden;
     width: 100%;
     display: flex;
     background-color: whitesmoke;
@@ -34,7 +35,10 @@ nav {
     align-items: stretch;
     justify-content: center;
     position: fixed;
-    button {
+    #button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         height: 50px;
         width: 50px;
@@ -50,30 +54,40 @@ nav {
             box-shadow: 5px 5px 5px lightgray;
         }
     }
-    a { 
-        display: flex;
-        border: 1px solid transparent;
-        color: black;
-        justify-content: center;
-        padding: 20px;
-        transition: all 0.5s ease;
-        i {
-            &.fa-home::after {
-                content: 'Home';
-            }
-            &.fa-laptop-code::after {
-                content: 'Projects';
-            }
-            &.fa-user::after {
-                content: 'About';
-            }
-            &.fa-paper-plane::after {
-                content: 'Contact';
-            }
-        }
-        &:hover{
-            border-color: lightslategray;
+    .links {
+        position: relative;
+        div {
+            padding: 20px;
+            position: absolute;
+            background-color: transparent !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid lightgray;
             box-shadow: 5px 5px 5px lightgray;
+        }
+        a { 
+            display: flex;
+            border: 1px solid transparent;
+            color: black;
+            justify-content: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            i {
+                &.fa-home::after {
+                    content: 'Home';
+                }
+                &.fa-laptop-code::after {
+                    content: 'Projects';
+                }
+                &.fa-user::after {
+                    content: 'About';
+                }
+                &.fa-paper-plane::after {
+                    content: 'Contact';
+                }
+            }
         }
     }
 }
@@ -127,12 +141,23 @@ body.dark {
         a {
             background-color: transparent;
         }
-        button {
+        #button, .active {
+            background-color: black;
             border-color: darkslategray;
         }
-        a:hover, button:hover {
+        #button:hover, .active {
             border-color: darkslategray;
             box-shadow: 5px 5px 5px darkslategray !important;
+        }
+    }
+    #screens {
+        #contact {
+            a {
+                &:hover {
+                    border-color: darkslategray;
+                    box-shadow: 5px 5px 5px darkslategray;
+                }
+            }
         }
     }
 }
@@ -149,7 +174,7 @@ body.dark {
     }
     nav {
         width: 20%;
-        button {
+        #button {
             transform: scale(75%);
             left: 3%;
         }

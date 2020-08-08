@@ -11,6 +11,7 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +51,16 @@ nav {
   position: fixed;
 }
 
-nav button {
+nav #button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   height: 50px;
   width: 50px;
@@ -67,12 +77,28 @@ nav button {
           user-select: none;
 }
 
-nav button:hover {
+nav #button:hover {
   -webkit-box-shadow: 5px 5px 5px lightgray;
           box-shadow: 5px 5px 5px lightgray;
 }
 
-nav a {
+nav .links {
+  position: relative;
+}
+
+nav .links div {
+  padding: 20px;
+  position: absolute;
+  background-color: transparent !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 5px 5px 5px lightgray;
+          box-shadow: 5px 5px 5px lightgray;
+}
+
+nav .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,30 +108,25 @@ nav a {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
+  cursor: pointer;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-nav a i.fa-home::after {
+nav .links a i.fa-home::after {
   content: 'Home';
 }
 
-nav a i.fa-laptop-code::after {
+nav .links a i.fa-laptop-code::after {
   content: 'Projects';
 }
 
-nav a i.fa-user::after {
+nav .links a i.fa-user::after {
   content: 'About';
 }
 
-nav a i.fa-paper-plane::after {
+nav .links a i.fa-paper-plane::after {
   content: 'Contact';
-}
-
-nav a:hover {
-  border-color: lightslategray;
-  -webkit-box-shadow: 5px 5px 5px lightgray;
-          box-shadow: 5px 5px 5px lightgray;
 }
 
 #screens {
@@ -194,14 +215,21 @@ body.dark * a {
   background-color: transparent;
 }
 
-body.dark * button {
+body.dark * #button, body.dark * .active {
+  background-color: black;
   border-color: darkslategray;
 }
 
-body.dark * a:hover, body.dark * button:hover {
+body.dark * #button:hover, body.dark * .active {
   border-color: darkslategray;
   -webkit-box-shadow: 5px 5px 5px darkslategray !important;
           box-shadow: 5px 5px 5px darkslategray !important;
+}
+
+body.dark #screens #contact a:hover {
+  border-color: darkslategray;
+  -webkit-box-shadow: 5px 5px 5px darkslategray;
+          box-shadow: 5px 5px 5px darkslategray;
 }
 
 @media (max-width: 768px) {
@@ -217,7 +245,7 @@ body.dark * a:hover, body.dark * button:hover {
   nav {
     width: 20%;
   }
-  nav button {
+  nav #button {
     -webkit-transform: scale(75%);
             transform: scale(75%);
     left: 3%;

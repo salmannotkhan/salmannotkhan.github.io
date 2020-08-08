@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/293dd6a7e8.js" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+    <title>Salman Shaikh's Portfolio</title>
 </head>
 <body>
     <nav>
-        <button>
+        <div id="button">
             <i class="fas fa-moon"></i>
-        </button>
-        <a href="#home">
-            <i class="fa fa-home"></i>
-        </a>
-        <a href="#projects">
-            <i class="fa fa-laptop-code"></i>
-        </a>
-        <a href="#about">
-            <i class="fa fa-user"></i>
-        </a>
-        <a href="#contact">
-            <i class="fa fa-paper-plane"></i>
-        </a>
+        </div>
+        <div class="links">
+            <div class="active">&nbsp;</div>
+            <a data-target="#home">
+                <i class="fa fa-home"></i>
+            </a>
+            <a data-target="#projects">
+                <i class="fa fa-laptop-code"></i>
+            </a>
+            <a data-target="#about">
+                <i class="fa fa-user"></i>
+            </a>
+            <a data-target="#contact">
+                <i class="fa fa-paper-plane"></i>
+            </a>
+        </div>
     </nav>
     <div id="screens">
         <div id="home">
@@ -61,17 +64,5 @@
         </div>
     </div>
 </body>
-<script>
-    btn = document.querySelector('nav button')
-    hours = new Date().getHours()
-    function nightMode(){
-        document.querySelector('body').classList.toggle('dark')
-        btn.children[0].classList.toggle('fa-sun')
-        btn.children[0].classList.toggle('fa-moon')
-    }
-    if (hours > 18){
-        nightMode()
-    }
-    btn.addEventListener('click', nightMode)
-</script>
+<script src="./main.js"></script>
 </html>
