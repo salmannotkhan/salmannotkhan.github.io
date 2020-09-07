@@ -286,7 +286,7 @@ nav .links a i.fa-paper-plane::after {
     padding-left: 20%;
   }
   #screens > div {
-    padding-right: 25px !important;
+    padding-right: 5% !important;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
