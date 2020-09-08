@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
 
 *, *::after {
     padding: 0;
@@ -32,11 +32,15 @@ body.dark {
     --bg-color: black !important;
     --font-color: whitesmoke !important;
     --border-color: darkslategray !important;
+    #contact, nav{
+        img {
+            filter: invert(1);
+        }
+    }
 }
 
-i::after {
-    padding: 10px;
-    font-weight: normal;
+.links span {
+    padding-left: 10px;
 }
 
 nav {
@@ -86,20 +90,6 @@ nav {
             padding: 20px;
             cursor: pointer;
             transition: all 0.5s ease;
-            i {
-                &.fa-home::after {
-                    content: 'Home';
-                }
-                &.fa-laptop-code::after {
-                    content: 'Projects';
-                }
-                &.fa-user::after {
-                    content: 'About';
-                }
-                &.fa-paper-plane::after {
-                    content: 'Contact';
-                }
-            }
         }
     }
 }
@@ -192,6 +182,11 @@ nav {
         #button {
             transform: scale(75%);
             left: 3%;
+        }
+        .links {
+            span {
+                display: none;
+            }
         }
     }
     #screens {
