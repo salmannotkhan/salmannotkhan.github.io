@@ -144,6 +144,7 @@ nav {
         &#contact {
             flex-direction: row;
             align-items: center;
+            justify-content: center;
             a {
                 display: flex;
                 flex-direction: column;
@@ -152,15 +153,14 @@ nav {
                 padding: 10px;
                 border: 1px solid transparent;
                 border-radius: 5px;
+                img {
+                    height: 75px;
+                    width: 75px;
+                }
                 &:hover{
                     border-color: var(--border-color);
                     box-shadow: 5px 5px 5px var(--border-color);
                 }
-            }
-            i {
-                color: var(--font-color);
-                font-size: 50px;
-                margin: 10px;
             }
         }
     }
@@ -223,8 +223,9 @@ nav {
         a{
             justify-content: center !important;
             align-items: center !important;
-            i {
-                font-size: 25px !important;
+            img {
+                height: 50px !important;
+                width: 50px !important;
             }
         }
     }
