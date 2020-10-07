@@ -161,6 +161,12 @@ nav .links a {
   padding-right: 50px;
 }
 
+#screens > div#home img {
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
 #screens > div#projects {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -273,6 +279,9 @@ nav .links a {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  #screens > div#home img {
+    height: 10%;
   }
   #projects {
     -webkit-box-orient: vertical !important;

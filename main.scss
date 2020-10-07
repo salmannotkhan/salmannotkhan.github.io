@@ -107,6 +107,13 @@ nav {
         align-items: flex-end;
         justify-content: center;
         padding-right: 50px;
+        &#home {
+            img {
+                height: 150px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+            }
+        }
         &#projects {
             flex-direction: row;
             justify-content: space-around;
@@ -184,6 +191,11 @@ nav {
         & > div {
             padding-right: 5% !important;
             align-items: flex-end;
+            &#home {
+                img {
+                    height: 10%;
+                }
+            }
         }
     }
     #projects {
