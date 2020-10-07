@@ -7,6 +7,11 @@
   font-family: 'Mulish', sans-serif;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
 }
 
 html, body {
@@ -23,14 +28,6 @@ html, body {
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-}
-
-html *, body * {
-  color: var(--font-color);
-}
-
-html a, body a {
-  text-decoration: none;
 }
 
 body.dark {
@@ -289,24 +286,49 @@ nav .links a {
   #projects .lang-logos {
     width: 250px;
     overflow: hidden;
+  }
+  #projects .lang-logos .img {
+    height: 75px;
+    position: relative;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
-    -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    -webkit-animation: slider 5s ease-in-out infinite;
+            animation: slider 5s ease-in-out infinite;
   }
-  #projects .lang-logos img {
-    scroll-snap-align: center;
-    height: 75px;
+  #projects .lang-logos .img img {
+    height: 100%;
     margin: 0 90px !important;
-  }
-  #projects .lang-logos img:last-child {
-    padding-right: 50px !important;
   }
   #projects .project {
     margin-right: 0px !important;
+  }
+  @-webkit-keyframes slider {
+    10%, 20%, 30%, 100% {
+      left: 0%;
+    }
+    40%, 50%, 60% {
+      left: -133%;
+    }
+    70%, 80%, 90% {
+      left: -275%;
+    }
+  }
+  @keyframes slider {
+    10%, 20%, 30%, 100% {
+      left: 0%;
+    }
+    40%, 50%, 60% {
+      left: -133%;
+    }
+    70%, 80%, 90% {
+      left: -275%;
+    }
   }
   #contact {
     -webkit-box-orient: vertical !important;
