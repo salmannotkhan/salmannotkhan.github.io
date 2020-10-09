@@ -55,7 +55,7 @@ nav {
         align-items: center;
         position: fixed;
         height: 50px;
-        width: 50px;
+        width: max-content;
         font-size: 22px;
         top: 2%;
         left: 2%;
@@ -64,8 +64,17 @@ nav {
         padding: 10px;
         user-select: none;
         img {
+            margin-left: 2px;
             height: 25px;
             width: 25px;
+        }
+        div {
+            text-align: right;
+            font-size: medium;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out margin-left 0.5s ease-in-out;
+            margin-left: -110px;
+            word-wrap: normal;
         }
         &:hover {
             box-shadow: 5px 5px 5px var(--border-color);
@@ -181,6 +190,10 @@ nav {
         #button {
             transform: scale(0.75);
             left: 3%;
+            div {
+                margin-left: -124px;
+                font-size: large;
+            }
         }
         span {
             display: none;
