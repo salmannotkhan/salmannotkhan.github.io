@@ -202,15 +202,60 @@ nav .links a {
   margin: 25px;
 }
 
+#screens > div#projects .project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  height: 500px;
+  scrollbar-width: none;
+}
+
+#screens > div#projects .project-list::-webkit-scrollbar {
+  display: none;
+}
+
 #screens > div#projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  scroll-snap-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 95%;
+  height: 45%;
+  max-height: 45%;
   border: 1px solid var(--border-color);
-  margin: 10px;
+  margin: 10px 20px 10px 5px;
   padding: 10px;
   border-radius: 5px;
 }
 
 #screens > div#projects .project div {
   margin: 5px;
+}
+
+#screens > div#projects .project .details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 #screens > div#projects .project .title {
@@ -331,8 +376,12 @@ nav .links a {
     height: 100%;
     margin: 0 90px !important;
   }
+  #projects .project-list {
+    width: 90% !important;
+    height: 300px;
+  }
   #projects .project {
-    margin-right: 0px !important;
+    margin-right: 0px;
   }
   @-webkit-keyframes slider {
     10%, 20%, 30%, 100% {

@@ -43,30 +43,7 @@
                     <img src="images/php-logo.webp" alt="php">
                 </div>
             </div>
-            <div class="projects-list">
-                <div class="project">
-                    <div class="title">
-                        Pied Piper
-                    </div>
-                    <div class="description">
-                        An Online Attendence System created in PHP
-                    </div>
-                    <div class="links">
-                        <a href="https://www.github.com/salmannotkhan/Pied-Piper">Github Link</a>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="title">
-                        Palm Tees
-                    </div>
-                    <div class="description">
-                        An Online E-commerce website created in Python(Django)
-                    </div>
-                    <div class="links">
-                        <a href="https://www.github.com/salmannotkhan/Palm_Tees">Github Link</a>
-                        <a href="https://palm-tees.herokuapp.com/">Visit Site</a>
-                    </div>
-                </div>
+            <div class="project-list">
             </div>
         </div>
         <div id="about">
@@ -99,5 +76,28 @@
         </div>
     </div>
 </body>
+<script id="project" type="x-tmpl-mustache">
+    <div class="project">
+        <div class="details">
+            <div class="title">
+                {{name}}
+            </div>
+            <div class="description">
+                {{desc}}
+            </div>
+            <div class="lang">
+                Written in: {{lang}}
+            </div>
+        </div>
+        <div class="links">
+            <a href="{{githubUrl}}">Github Link</a>
+            {{#url}}
+                <a href="{{url}}">Visit Site</a>
+            {{/url}}
+        </div>
+    </div>
+</script>
+<script src="https://unpkg.com/mustache@latest"></script>
 <script src="./main.js"></script>
+<script src="./projects.js"></script>
 </html>

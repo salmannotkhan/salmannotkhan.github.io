@@ -133,13 +133,37 @@ nav {
                     margin: 25px;
                 }
             }
+            .project-list {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 25%;
+                overflow-y: scroll;
+                scroll-snap-type: x mandatory;
+                height: 500px;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
             .project {
+                display: flex;
+                flex-direction: column;
+                scroll-snap-align: center;
+                justify-content: space-between;
+                flex: 1;
+                min-width: 95%;
+                height: 45%;
+                max-height: 45%;
                 border: 1px solid var(--border-color);
-                margin: 10px;
+                margin: 10px 20px 10px 5px;
                 padding: 10px;
                 border-radius: 5px;
                 div {
                     margin: 5px;
+                }
+                .details {
+                    flex: 1;
                 }
                 .title {
                     font-weight: bolder;
@@ -230,8 +254,12 @@ nav {
                 }
             }
         }
+        .project-list {
+            width: 90% !important;
+            height: 300px;
+        }
         .project {
-            margin-right: 0px !important;   
+            margin-right: 0px;   
         }
     }
     @keyframes slider {
