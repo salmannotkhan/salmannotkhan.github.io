@@ -213,15 +213,22 @@ nav .links a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 25%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   height: 500px;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
 }
 
 #screens > div#projects .project-list::-webkit-scrollbar {
-  display: none;
+  height: 5px;
+  background-color: transparent;
+}
+
+#screens > div#projects .project-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--border-color);
 }
 
 #screens > div#projects .project {
@@ -263,14 +270,43 @@ nav .links a {
 }
 
 #screens > div#projects .project .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 30px auto 20px auto;
 }
 
-#screens > div#projects .project a {
+#screens > div#projects .project .link {
   border: 1px solid var(--border-color);
-  padding: 10px;
+  position: relative;
   border-radius: 5px;
   margin: 0 5px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#screens > div#projects .project .link a {
+  display: block;
+  padding: 10px;
+}
+
+#screens > div#projects .project .link .ripple {
+  position: absolute;
+  background-color: var(--border-color);
+  opacity: .5;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid var(--border-color);
+  -webkit-animation: ripple 1.5s;
+          animation: ripple 1.5s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #screens > div#contact {
@@ -312,6 +348,36 @@ nav .links a {
   border-color: var(--border-color);
   -webkit-box-shadow: 5px 5px 5px var(--border-color);
           box-shadow: 5px 5px 5px var(--border-color);
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {

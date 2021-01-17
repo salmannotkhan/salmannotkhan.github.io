@@ -90,14 +90,18 @@
             </div>
         </div>
         <div class="links">
-            <a href="{{githubUrl}}">Github Link</a>
+            <div class="link">
+                <a href="{{githubUrl}}">Github Link</a>
+            </div>
             {{#url}}
+            <div class="link">
                 <a href="{{url}}">Visit Site</a>
+            </div>
             {{/url}}
         </div>
     </div>
 </script>
 <script src="https://unpkg.com/mustache@latest"></script>
-<script src="./main.js"></script>
 <script src="./projects.js"></script>
+<script src="./main.js"></script>
 </html>

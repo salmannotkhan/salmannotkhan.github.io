@@ -138,13 +138,20 @@ nav {
                 flex-wrap: wrap;
                 flex-direction: column;
                 width: 25%;
-                overflow-y: scroll;
+                overflow-y: hidden;
                 scroll-snap-type: x mandatory;
                 height: 500px;
-                scrollbar-width: none;
+                scrollbar-width: thin;
+                scrollbar-color: var(--border-color) transparent;
                 &::-webkit-scrollbar {
-                    display: none;
+                    height: 5px;
+                    background-color: transparent;
                 }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: var(--border-color);
+                }
+                
             }
             .project {
                 display: flex;
@@ -169,13 +176,33 @@ nav {
                     font-weight: bolder;
                 }
                 .links {
-                    margin: 30px auto 20px auto;
+                    display: flex;
+                    margin: 30px auto 20px auto;                  
                 }
-                a {
+                .link {
                     border: 1px solid var(--border-color);
-                    padding: 10px;
+                    position: relative;
                     border-radius: 5px;
                     margin: 0 5px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    user-select: none;
+                    a {
+                        display: block;
+                        padding: 10px;
+                    }
+                    .ripple {
+                        position: absolute;
+                        background-color: var(--border-color);
+                        opacity: .5;
+                        height: 250px;
+                        width: 250px;
+                        border-radius: 50%;
+                        pointer-events: none;
+                        border: 1px solid var(--border-color);
+                        animation: ripple 1.5s;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
         }
@@ -201,6 +228,20 @@ nav {
                 }
             }
         }
+    }
+}
+@keyframes ripple {
+    0% {
+        height: 0px;
+        width: 0px;
+        opacity: 1;
+    }
+    80% {
+        height: 250px;
+        width: 250px;
+    }
+    100% {
+        opacity: 0;
     }
 }
 

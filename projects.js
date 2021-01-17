@@ -30,4 +30,17 @@ request.onload = () => {
             projectList.innerHTML += rendered
         }
     });
+    linkBtn = document.querySelectorAll(".project .links .link")
+    ripple = document.createElement("div")
+    ripple.classList.add("ripple")
+    linkBtn.forEach(link => {
+        link.addEventListener("click", function (e) {
+            ripple.style.left = e.layerX + "px"
+            ripple.style.top = e.layerY + "px"
+            e.target.appendChild(ripple)
+            ripple.addEventListener("animationend", ()=>{
+                ripple.remove()
+            })
+        })
+    })
 }
