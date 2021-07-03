@@ -1,0 +1,86 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 95%;
+  height: 45%;
+  max-height: 45%;
+  border: 1px solid var(--border-color);
+  margin: 10px 20px 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.project div {
+  margin: 5px;
+}
+.project .details {
+  flex: 1;
+}
+.project .title {
+  font-weight: bolder;
+}
+.project .links {
+  display: flex;
+  margin: 30px auto 20px auto;
+}
+.project .link {
+  border: 1px solid var(--border-color);
+  position: relative;
+  border-radius: 5px;
+  margin: 0 5px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.project .link a {
+  display: block;
+  padding: 10px;
+}
+.project .link .ripple {
+  position: absolute;
+  background-color: var(--border-color);
+  opacity: 0.5;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid var(--border-color);
+  -webkit-animation: ripple 1.5s;
+          animation: ripple 1.5s;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=Project.css.map */
