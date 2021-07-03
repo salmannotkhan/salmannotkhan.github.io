@@ -1,0 +1,117 @@
+#projects {
+  flex-direction: row !important;
+  justify-content: space-around;
+  align-items: center !important;
+}
+#projects .lang-logos {
+  display: flex;
+}
+#projects .lang-logos img {
+  margin: 25px;
+}
+#projects .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 25%;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  height: 500px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+#projects .project-list::-webkit-scrollbar {
+  height: 5px;
+  background-color: transparent;
+}
+#projects .project-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--border-color);
+}
+#projects .project {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 95%;
+  height: 45%;
+  max-height: 45%;
+  border: 1px solid var(--border-color);
+  margin: 10px 20px 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#projects .project div {
+  margin: 5px;
+}
+#projects .project .details {
+  flex: 1;
+}
+#projects .project .title {
+  font-weight: bolder;
+}
+#projects .project .links {
+  display: flex;
+  margin: 30px auto 20px auto;
+}
+#projects .project .link {
+  border: 1px solid var(--border-color);
+  position: relative;
+  border-radius: 5px;
+  margin: 0 5px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#projects .project .link a {
+  display: block;
+  padding: 10px;
+}
+#projects .project .link .ripple {
+  position: absolute;
+  background-color: var(--border-color);
+  opacity: 0.5;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid var(--border-color);
+  -webkit-animation: ripple 1.5s;
+          animation: ripple 1.5s;
+  transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+  }
+  80% {
+    height: 250px;
+    width: 250px;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=ProjectsScreen.css.map */

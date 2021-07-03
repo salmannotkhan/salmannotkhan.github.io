@@ -1,0 +1,12 @@
+button {
+  display: flex;
+  border: 1px solid transparent;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+span {
+  padding-left: 10px;
+}/*# sourceMappingURL=NavBtn.css.map */
