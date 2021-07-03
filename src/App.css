@@ -21,7 +21,7 @@ body,
 	scroll-snap-type: y mandatory;
 }
 
-body.dark {
+div.dark {
 	--bg-color: black !important;
 	--font-color: whitesmoke !important;
 	--border-color: darkslategray !important;
@@ -31,7 +31,8 @@ a {
 	text-decoration: none;
 }
 
-#contact nav img {
+.dark nav img,
+.dark #contact img {
 	filter: invert(1);
 }
 

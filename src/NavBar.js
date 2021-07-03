@@ -7,26 +7,32 @@ class NavBar extends React.Component {
 	darkText = React.createRef();
 	state = { darkMode: false };
 
-	darkMode() {
-		this.setState({ darkMode: !this.state.darkMode });
-		document.body.classList.toggle('dark');
-		console.log(this.darkText.current.style);
-		if (this.state.darkMode) {
-			this.darkText.current.style.webkitAnimationPlayState = 'paused';
-		}
-		console.log(this.darkText.current.style);
-	}
+	darkMode() {}
 
 	componentDidMount() {
-		if (this.state.darkMode) {
-			this.darkText.current.style.webkitAnimationPlayState = 'paused';
-		}
+		const darkMode = localStorage.getItem('darkMode') === 'true';
+		this.setState({ darkMode }, () => {
+			if (this.state.darkMode) {
+				document.body.children[1].classList.toggle('dark');
+				this.darkText.current.style.webkitAnimationPlayState = 'paused';
+			}
+		});
+	}
+
+	toggleTheme() {
+		this.setState({ darkMode: !this.state.darkMode }, () => {
+			localStorage.setItem('darkMode', this.state.darkMode);
+			if (this.state.darkMode) {
+				this.darkText.current.style.webkitAnimationPlayState = 'paused';
+			}
+		});
+		document.body.children[1].classList.toggle('dark');
 	}
 
 	render() {
 		return (
 			<nav>
-				<div id="button" onClick={() => this.darkMode()}>
+				<div id="button" onClick={() => this.toggleTheme()}>
 					<img
 						src={
 							this.state.darkMode
