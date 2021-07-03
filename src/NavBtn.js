@@ -2,10 +2,7 @@ import React from 'react';
 import './NavBtn.css';
 
 class NavBtn extends React.Component {
-	constructor(props) {
-		super(props);
-		this.button = React.createRef();
-	}
+	button = React.createRef();
 	switchPage() {
 		document.querySelector('.active').style.top =
 			this.button.current.offsetTop + 'px';

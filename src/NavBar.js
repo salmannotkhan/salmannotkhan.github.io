@@ -3,12 +3,9 @@ import './NavBar.css';
 import NavBtn from './NavBtn';
 
 class NavBar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.timeout = '';
-		this.darkText = React.createRef();
-		this.state = { darkMode: false };
-	}
+	timeout = '';
+	darkText = React.createRef();
+	state = { darkMode: false };
 
 	darkMode() {
 		this.setState({ darkMode: !this.state.darkMode });
