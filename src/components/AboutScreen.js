@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutScreen.scss';
+import '../styles/AboutScreen.scss';
 
 class AboutScreen extends React.Component {
 	render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import './ProjectsScreen.scss';
+import '../styles/ProjectsScreen.scss';
 
 class ProjectsScreen extends React.Component {
 	state = {
@@ -18,12 +18,14 @@ class ProjectsScreen extends React.Component {
 		}
 		return x.join(' ');
 	};
+
 	async componentDidMount() {
 		const url = 'https://api.github.com/users/salmannotkhan/starred';
 		const response = await fetch(url);
 		const projects = await response.json();
 		this.setState({ projects });
 	}
+
 	render() {
 		return (
 			<div id="projects">

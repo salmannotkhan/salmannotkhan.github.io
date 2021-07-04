@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Mulish', sans-serif;
+	transition: all 0.5s ease;
+	color: var(--font-color);
+}
+html,
+body,
+#root,
+.App {
+	--bg-color: whitesmoke;
+	--font-color: black;
+	--border-color: lightgray;
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	background-color: var(--bg-color);
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	&.dark {
+		--bg-color: black !important;
+		--font-color: whitesmoke !important;
+		--border-color: darkslategray !important;
+		nav {
+			#button {
+				div {
+					animation: none !important;
+				}
+			}
+			img {
+				filter: invert(1);
+			}
+		}
+		#contact img {
+			filter: invert(1);
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+#screens {
+	display: block;
+	height: 100%;
+	padding-left: 15%;
+	flex: 1;
+	flex-direction: column;
+	align-items: stretch;
+	& > div {
+		display: flex;
+		scroll-snap-align: center;
+		flex-direction: column;
+		height: 100%;
+		align-items: flex-end;
+		justify-content: center;
+		padding-right: 50px;
+	}
+}

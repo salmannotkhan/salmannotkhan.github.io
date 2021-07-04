@@ -29,9 +29,8 @@ nav {
 			text-align: right;
 			font-size: medium;
 			opacity: 0;
-			animation: slideout 10s;
-			transition: opacity 0.5s ease-in-out margin-left 0.5s ease-in-out;
-			margin-left: -120px;
+			animation: slideout 5s ease-in-out 5s;
+			margin-left: -110px;
 			word-wrap: normal;
 		}
 		&:hover {
@@ -39,26 +38,25 @@ nav {
 		}
 	}
 	@keyframes slideout {
-		45% {
-			margin-left: -120px;
+		0% {
+			margin-left: -110px;
 		}
-		50% {
+		5% {
 			margin-left: 10px;
 			opacity: 0;
 		}
-		55% {
+		10% {
 			opacity: 1;
 		}
 		90% {
 			opacity: 1;
-			margin-left: 10px;
 		}
 		95% {
 			opacity: 0;
 			margin-left: 10px;
 		}
 		100% {
-			margin-left: -120px;
+			margin-left: -110px;
 		}
 	}
 	.links {
