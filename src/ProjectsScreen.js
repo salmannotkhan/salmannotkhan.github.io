@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import './ProjectsScreen.css';
+import './ProjectsScreen.scss';
 
 class ProjectsScreen extends React.Component {
 	state = {

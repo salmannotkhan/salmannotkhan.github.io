@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBtn.css';
+import './NavBtn.scss';
 
 class NavBtn extends React.Component {
 	button = React.createRef();
