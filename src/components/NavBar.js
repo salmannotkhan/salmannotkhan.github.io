@@ -6,10 +6,7 @@ class NavBar extends React.Component {
 	render() {
 		return (
 			<nav>
-				<div
-					id="button"
-					onClick={() => this.props.toggleTheme(this.props.darkMode)}
-				>
+				<div id="button" onClick={() => this.props.toggleTheme()}>
 					<img
 						src={
 							this.props.darkMode
