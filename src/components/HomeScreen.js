@@ -1,11 +1,18 @@
 import React from 'react';
-import '../styles/HomeScreen.scss';
 
 class HomeScreen extends React.Component {
 	render() {
 		return (
 			<div id="home">
-				<img src="images/profile.webp" alt="Salman Shaikh" />
+				<img
+					style={{
+						height: '150px',
+						marginBottom: '20px',
+						borderRadius: '50%',
+					}}
+					src="images/profile.webp"
+					alt="Salman Shaikh"
+				/>
 				<h1>Hi, I'm Salman</h1>
 				<p>And this is my site</p>
 			</div>

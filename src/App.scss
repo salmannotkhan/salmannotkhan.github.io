@@ -63,3 +63,21 @@ a {
 		padding-right: 50px;
 	}
 }
+
+@media (max-width: 768px) {
+	* {
+		font-size: 15px;
+	}
+	#screens {
+		padding-left: 20%;
+		& > div {
+			padding-right: 5% !important;
+			align-items: flex-end;
+			&#home {
+				img {
+					height: 10% !important;
+				}
+			}
+		}
+	}
+}

@@ -21,3 +21,13 @@
 		}
 	}
 }
+@media (max-width: 768px) {
+	#contact {
+		flex-direction: column !important;
+
+		img {
+			height: 50px !important;
+			width: 50px !important;
+		}
+	}
+}
