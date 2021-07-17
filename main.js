@@ -10,6 +10,7 @@ function nightMode() {
 }
 if (location.hash !== '') {
     active.style.top = document.querySelector(`a[href="${location.hash}"]`).offsetTop + 'px'
+    setTimeout(()=>document.querySelector(location.hash).scrollIntoView(), 100)
 }
 links.forEach((link) => {
     link.addEventListener("click", function () {
