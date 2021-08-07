@@ -4,7 +4,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: var(--font-color);
@@ -14,7 +14,8 @@ a {
   text-decoration: none;
 }
 
-html, body {
+html,
+body {
   --bg-color: whitesmoke;
   --font-color: black;
   --border-color: lightgray;
@@ -36,7 +37,8 @@ body.dark {
   --border-color: darkslategray !important;
 }
 
-body.dark #contact img, body.dark nav img {
+body.dark #contact img,
+body.dark nav img {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -297,7 +299,7 @@ nav .links a {
 #screens > div#projects .project .link .ripple {
   position: absolute;
   background-color: var(--border-color);
-  opacity: .5;
+  opacity: 0.5;
   height: 250px;
   width: 250px;
   border-radius: 50%;
@@ -435,8 +437,8 @@ nav .links a {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
-    -webkit-animation: slider 5s ease-in-out infinite;
-            animation: slider 5s ease-in-out infinite;
+    -webkit-animation: slider 7s ease-in-out infinite;
+            animation: slider 7s ease-in-out infinite;
   }
   #projects .lang-logos .img img {
     height: 100%;
@@ -450,25 +452,41 @@ nav .links a {
     margin-right: 0px;
   }
   @-webkit-keyframes slider {
-    10%, 20%, 30%, 100% {
+    10%,
+    20%,
+    100% {
       left: 0%;
     }
-    40%, 50%, 60% {
-      left: -133%;
+    25%,
+    45% {
+      left: -131%;
     }
-    70%, 80%, 90% {
-      left: -275%;
+    50%,
+    70% {
+      left: -261%;
+    }
+    75%,
+    95% {
+      left: -362.5%;
     }
   }
   @keyframes slider {
-    10%, 20%, 30%, 100% {
+    10%,
+    20%,
+    100% {
       left: 0%;
     }
-    40%, 50%, 60% {
-      left: -133%;
+    25%,
+    45% {
+      left: -131%;
     }
-    70%, 80%, 90% {
-      left: -275%;
+    50%,
+    70% {
+      left: -261%;
+    }
+    75%,
+    95% {
+      left: -362.5%;
     }
   }
   #contact {
