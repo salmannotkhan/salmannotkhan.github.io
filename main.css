@@ -275,7 +275,7 @@ nav .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 30px auto 20px auto;
+  margin: 30px auto 20px;
 }
 
 #screens > div#projects .project .link {
@@ -354,8 +354,8 @@ nav .links a {
 
 @-webkit-keyframes ripple {
   0% {
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     opacity: 1;
   }
   80% {
@@ -369,8 +369,8 @@ nav .links a {
 
 @keyframes ripple {
   0% {
-    height: 0px;
-    width: 0px;
+    height: 0;
+    width: 0;
     opacity: 1;
   }
   80% {
@@ -449,7 +449,7 @@ nav .links a {
     height: 300px;
   }
   #projects .project {
-    margin-right: 0px;
+    margin-right: 0;
   }
   @-webkit-keyframes slider {
     10%,
@@ -500,4 +500,3 @@ nav .links a {
     width: 50px !important;
   }
 }
-/*# sourceMappingURL=main.css.map */
