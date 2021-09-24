@@ -22,7 +22,7 @@
 	}
 	.links {
 		display: flex;
-		margin: 30px auto 20px auto;
+		margin: 30px auto 20px;
 	}
 	.link {
 		border: 1px solid var(--border-color);
@@ -53,8 +53,8 @@
 
 @keyframes ripple {
 	0% {
-		height: 0px;
-		width: 0px;
+		height: 0;
+		width: 0;
 		opacity: 1;
 	}
 	80% {
